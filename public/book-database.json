@@ -1,0 +1,28 @@
+[
+    {
+        "cover": "images/happy-place.jpg",
+        "title": "Happy Place",
+        "summary": "Poppy, a romance writer, and Alex, a literary writer, have nothing in common but become best friends. They spend the summer swapping genres to finish their books. Their plan is to avoid falling in love, but old feelings start to emerge. What could possibly go wrong?"
+    },
+    {
+        "cover": "images/book-lovers.jpg",
+        "title": "Book Lovers",
+        "summary": "Harriet and Wyn have been the perfect couple—until they weren’t. Now, after a breakup, they’re forced to share the largest bedroom at their friend group's Maine cottage. They’ll pretend everything’s fine, but with so much unsaid between them, how long can they keep up the act?"
+    },
+    {
+        "cover": "images/beach-read.jpg",
+        "title": "Beach Read",
+        "summary": "Nora Stephens is a literary agent who’s not the “heroine” type. She goes to a small town for the month with her sister, hoping for a transformation. Instead, she keeps bumping into Charlie, a brooding editor from back home. As they spend more time together, their complicated past might unravel their stories about themselves."
+    },
+    {
+        "cover": "images/people-we-meet-on-vacation.jpg",
+        "title": "People We Meet On Vacation",
+        "summary": "Poppy and Alex have been best friends for years, taking summer vacations together. But after an incident two years ago, they haven’t spoken since. Poppy convinces Alex to take one last trip to fix things, hoping to confront the truth. Can they repair their friendship—or something more?"
+    },
+    {
+        "cover": "images/funny-story.jpg",
+        "title": "Funny Story",
+        "summary": "Daphne’s life unravels when her fiancé, Peter, falls for his best friend Petra. Stranded in Waning Bay, she becomes roommates with Petra’s ex, Miles, a scruffy, chaotic man. They fake a summer adventure for the world, but as they grow closer, Daphne wonders if falling for her ex’s new fiancée’s ex is possible."
+    }
+
+]

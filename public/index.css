@@ -1,0 +1,365 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 100%;
+    font-family: "League Spartan", serif;
+}
+
+/* CSS Variables */
+:root {
+    --light-brown: #4b3a3a;
+    --brown: #2b2727;
+    --light-pink: #fdb6b9;
+    --medium-pink: #ff9a9e;
+    --dark-pink: #cb464b;
+    --yellow: #ffefc5;
+    --shadow: #fdb6b9;
+    --grey: #868686;
+}
+
+/* Typography */
+p {
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Text Alignment Classes */
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--dark-pink);
+    border: 2px solid var(--dark-pink);
+    color: var(--yellow);
+    font-size: 15px;
+    padding: 15px 10px;
+    margin-top: 35px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.pink-bg button:hover {
+    background-color: var(--light-pink);
+    border: 2px solid var(--dark-pink);
+    color: var(--dark-pink);
+    cursor: pointer;
+} 
+#landing-page button:hover{
+    background-color: var(--yellow);
+    border: 2px solid var(--dark-pink);
+    color: var(--dark-pink);
+    cursor: pointer;
+} 
+
+
+/* Header */
+header {
+    background-color: var(--brown);
+    font-size: 40px;
+    color: var(--yellow);
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* Landing Page Section */
+#landing-page {
+    display: grid;
+    grid-template-columns: 85vw 15vw;
+    color: var(--light-brown);
+}
+#landing-page-text-container {
+    background: url('images/carousel-small-vw.png') no-repeat center center;
+    background-size: cover;
+}
+#landing-page-side {
+    background-color: var(--light-pink);
+}
+#landing-page-text {
+    padding: 60vh 30px 30px;
+    max-width: 440px;
+}
+#landing-page-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+#landing-page-text p {
+    font-style: italic;
+    text-align: right;
+}
+#landing-page-text button {
+    border: 2px solid var(--dark-pink);
+    width: 100%;
+    margin: 70px 0 0;
+    max-width: 440px;
+}
+
+/* Author Section */
+#who-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Featured Books Section */
+#books-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 15px;
+}
+.book-item {
+    background-color: var(--medium-pink);
+    padding: 15px;
+    text-align: center;
+}
+.book-item:hover {
+    box-shadow: 1px 1px 10px var(--light-brown);
+}
+.book-title {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--light-brown);
+}
+.book-cover {
+    display: block;
+    width: 40%;
+    margin: 0 auto 20px;
+    padding: 0;
+    box-shadow: 5px 5px var(--shadow);
+}
+
+.book-summary {
+    text-align: justify;
+    padding: 5px 0 0;
+    line-height: 1.4;
+    color: var(--light-brown);
+}
+
+/* Testimonials Section */
+#testimonials {
+    position: relative;
+    z-index: 1;
+}
+#testimonials-container {
+    padding-bottom: 50px;
+}
+#testimonials p {
+    padding: 15px 0;
+}
+#testimonials hr {
+    border: none;
+    height: 1px;
+    width: 50px;
+    margin: 0 auto;
+    background-color: var(--yellow);
+}
+
+/* Quotation Marks in Testimonials Section */
+#quotation-mark-1 {
+    position: absolute;
+    top: 130px;
+    left: 30px;
+    width: 150px;
+    z-index: -1;
+}
+#quotation-mark-2 {
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    width: 150px;
+    z-index: -1;
+}
+
+/* Miscellaneous Styles */
+hr {
+    border: none;
+    height: 10px;
+    background-color: var(--dark-pink);
+}
+img {
+    width: 100%;
+    padding: 30px 0;
+}
+.brown-bg {
+    background-color: var(--brown);
+    color: var(--yellow);
+    padding: 35px 30px;
+}
+.pink-bg {
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+    padding: 35px 30px;
+}
+
+/* Stay Updated Section */
+form {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top: 10px;
+}
+#stay-updated input {
+    border: none;
+    height: 44px;
+    padding: 5px;
+}
+input::placeholder {
+    color: var(--grey);
+    font-weight: lighter;
+    font-size: 15px;
+    padding: 10px;
+}
+#stay-updated button {
+    margin-top: 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark-pink);
+    color: var(--yellow);
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+@media screen and (min-width:500px) and (max-width:659px) {
+    /* Typography */
+    p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+
+    header {
+        font-size: 45px;
+        padding: 50px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .brown-bg {
+        padding: 35px 50px;
+    }
+    .pink-bg {
+        padding: 35px 50px;
+    }
+
+    /* Landing Page Section */
+    #landing-page {
+        grid-template-columns: 90vw 10vw;
+    }
+    #landing-page-text-container {
+        background: url('images/carousel-small-vw.png') no-repeat center center;
+        background-size: cover;
+    }
+    #landing-page-text {
+        padding: 60vh 50px 50px;
+    }
+    #landing-page-text h1 {
+        font-size: 50px;
+    }
+
+    .book-cover {
+        width: 30%;
+    }
+
+    input::placeholder {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 15px 50px;
+    }
+}
+
+@media  (min-width:660px) and (max-width:1023px) {
+    container {
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+        background-color: var(--yellow);
+    }
+    /* Typography */
+    p {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    header {
+        font-size: 45px;
+        padding: 50px;
+    }
+
+    .brown-bg {
+        padding: 45px 55px;
+        max-width: 780px;
+    }
+    .pink-bg {
+        padding: 45px 55px;
+        max-width: 780px;
+    }
+
+    /* Landing Page Section */
+    #landing-page {
+        grid-template-columns: 90vw 10vw;
+    }
+    #landing-page-text-container {
+        background: url('images/carousel-small-vw.png') no-repeat center center;
+        background-size: cover;
+    }
+    #landing-page-text {
+        padding: 60vh 55px 55px;
+    }
+    #landing-page-text h1 {
+        font-size: 55px;
+    }
+
+    /* Featured Books Section */ 
+    #books-container { 
+        max-width: 100%; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 25px; 
+    } 
+    .book-cover { 
+        width: 40%; 
+    }
+
+    input::placeholder {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 35px 55px;
+    }
+}
