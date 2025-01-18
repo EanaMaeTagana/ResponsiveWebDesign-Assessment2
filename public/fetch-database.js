@@ -13,8 +13,10 @@ fetch('/api/books')
       // Add book details
       bookElement.innerHTML = `
         <img src="${book.cover}" alt="${book.title} Cover" class="book-cover">
-        <h2 class="book-title">${book.title}</h2>
-        <p class="book-summary">${book.summary}</p>
+        <div class="book-info">
+          <h2 class="book-title">${book.title}</h2>
+          <p class="book-summary">${book.summary}</p>
+        </div>
       `;
 
       // Append the book element to the container

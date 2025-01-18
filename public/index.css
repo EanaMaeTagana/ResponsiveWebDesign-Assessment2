@@ -51,7 +51,7 @@ button {
     color: var(--yellow);
     font-size: 15px;
     padding: 15px 10px;
-    margin-top: 35px;
+    margin: 35px 0 0 0;
     width: 100%;
     transition: all 0.3s ease;
 }
@@ -85,7 +85,7 @@ header {
     color: var(--light-brown);
 }
 #landing-page-text-container {
-    background: url('images/carousel-small-vw.png') no-repeat center center;
+    background: url('images/carousel-tablet.png') no-repeat center center;
     background-size: cover;
 }
 #landing-page-side {
@@ -144,7 +144,6 @@ header {
     padding: 0;
     box-shadow: 5px 5px var(--shadow);
 }
-
 .book-summary {
     text-align: justify;
     padding: 5px 0 0;
@@ -158,6 +157,7 @@ header {
     z-index: 1;
 }
 #testimonials-container {
+    padding-top: 20px;
     padding-bottom: 50px;
 }
 #testimonials p {
@@ -251,7 +251,7 @@ footer {
 
     header {
         font-size: 45px;
-        padding: 50px;
+        padding: 25px 50px;
     }
 
     button {
@@ -268,10 +268,6 @@ footer {
     /* Landing Page Section */
     #landing-page {
         grid-template-columns: 90vw 10vw;
-    }
-    #landing-page-text-container {
-        background: url('images/carousel-small-vw.png') no-repeat center center;
-        background-size: cover;
     }
     #landing-page-text {
         padding: 60vh 50px 50px;
@@ -294,12 +290,6 @@ footer {
 }
 
 @media  (min-width:660px) and (max-width:1023px) {
-    container {
-        display: block;
-        margin: 0 auto;
-        justify-content: center;
-        background-color: var(--yellow);
-    }
     /* Typography */
     p {
         font-size: 18px;
@@ -317,25 +307,20 @@ footer {
 
     header {
         font-size: 45px;
-        padding: 50px;
+        padding: 25px 50px;
+        text-align: center;
     }
 
     .brown-bg {
         padding: 45px 55px;
-        max-width: 780px;
     }
     .pink-bg {
         padding: 45px 55px;
-        max-width: 780px;
     }
 
     /* Landing Page Section */
     #landing-page {
-        grid-template-columns: 90vw 10vw;
-    }
-    #landing-page-text-container {
-        background: url('images/carousel-small-vw.png') no-repeat center center;
-        background-size: cover;
+        grid-template-columns: 90% 10%;
     }
     #landing-page-text {
         padding: 60vh 55px 55px;
@@ -345,6 +330,8 @@ footer {
     }
 
     /* Featured Books Section */ 
+
+
     #books-container { 
         max-width: 100%; 
         display: grid; 
@@ -360,6 +347,116 @@ footer {
     }
 
     footer {
-        padding: 35px 55px;
+        padding: 15px 40px;
+        text-align: center;
     }
+
+}
+
+@media  (min-width:1024px) {
+    /* Typography */
+    p {
+        font-size: 22px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 65px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 22px;
+        max-width: 250px;
+        margin: 35px auto 0;
+        display: block;
+    }
+
+    header {
+        font-size: 65px;
+        padding: 30px 50px;
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    .brown-bg {
+        padding: 45px 120px;
+    }
+    .pink-bg {
+        padding: 45px 120px;
+    }
+
+    /* Landing Page Section */
+    #landing-page {
+        grid-template-columns: 90% 10%;
+    }
+    #landing-page-text {
+        padding: 45vh 0 55px 120px;
+        max-width: 550px;
+    }
+    #landing-page-text h1 {
+        font-size: 55px;
+        text-align: left;
+    }
+    #landing-page-text p {
+        text-align: left;
+    }
+    #landing-page-text button {
+        max-width: 250px;
+    }
+
+    /* Author Section */
+    #who-container {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    #who-image-container, #testimonials-container {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    /* Featured Books Section */
+    #books-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .book-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 25px;
+    }
+    .book-info {
+        margin: auto 0;
+    }
+    .book-cover {
+        width: 100%;
+        margin: auto 0;
+    }
+    .book-title {
+        font-size: 25px;
+        text-align: left;
+    }
+    .book-summary {
+        font-size: 18px;
+    }
+
+    #stay-updated button {
+        max-width: none;
+    }
+
+    input::placeholder {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 20px 40px;
+    }
+
 }
