@@ -1,3 +1,5 @@
+/* WEBSITE STYLING */
+
 /* Universal Reset */
 * {
     margin: 0;
@@ -8,6 +10,7 @@
 }
 
 /* CSS Variables */
+/* -- easier color usage */
 :root {
     --light-brown: #4b3a3a;
     --brown: #2b2727;
@@ -37,11 +40,21 @@ h2 {
 }
 
 /* Text Alignment Classes */
+/* -- for the specific paragraphs that will be aligned left or right */
 .left {
     text-align: left;
 }
 .right {
     text-align: right;
+}
+
+/* Header */
+header {
+    background-color: var(--brown);
+    font-size: 40px;
+    color: var(--yellow);
+    font-weight: bold;
+    padding: 15px;
 }
 
 /* Button Styles */
@@ -55,40 +68,69 @@ button {
     width: 100%;
     transition: all 0.3s ease;
 }
+/* -- hover effects */
 .pink-bg button:hover {
     background-color: var(--light-pink);
     border: 2px solid var(--dark-pink);
     color: var(--dark-pink);
     cursor: pointer;
+    transform: translateY(-5px);
 } 
+#landing-page-text button {
+    border: 2px solid var(--dark-pink);
+    width: 100%;
+    margin: 50px 0 0;
+    max-width: 440px;
+}
 #landing-page button:hover{
     background-color: var(--yellow);
     border: 2px solid var(--dark-pink);
     color: var(--dark-pink);
     cursor: pointer;
+    transform: translateY(-5px);
 } 
 
-
-/* Header */
-header {
+/* Miscellaneous Styles */
+hr { /* -- styles the lines that separate the content */
+    border: none;
+    height: 10px;
+    background-color: var(--dark-pink);
+}
+img { /* -- sets the image to 100% of the container */
+    width: 100%;
+    padding: 30px 0;
+}
+/* -- sets the background for all the sections with brown-bg or pink-bg */
+.brown-bg { 
     background-color: var(--brown);
-    font-size: 40px;
+    color: var(--yellow);
+    padding: 35px 30px;
+}
+.pink-bg {
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+    padding: 35px 30px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark-pink);
     color: var(--yellow);
     font-weight: bold;
-    padding: 15px;
+    padding: 15px 30px;
 }
 
 /* Landing Page Section */
-#landing-page {
+#landing-page { /* -- sets the display of the section to be in two columns, 85% and 15% of the viewport */
     display: grid;
     grid-template-columns: 85vw 15vw;
     color: var(--light-brown);
 }
-#landing-page-text-container {
-    background: url('images/carousel-tablet.png') no-repeat center center;
+#landing-page-text-container { /* -- adds a background image to the area in which the landing page text will be displayed */
+    background: url('images/background-small.png') no-repeat center center;
     background-size: cover;
 }
-#landing-page-side {
+#landing-page-side { /* -- sets the color of the area beside the landing page text */
     background-color: var(--light-pink);
 }
 #landing-page-text {
@@ -103,22 +145,16 @@ header {
     font-style: italic;
     text-align: right;
 }
-#landing-page-text button {
-    border: 2px solid var(--dark-pink);
-    width: 100%;
-    margin: 70px 0 0;
-    max-width: 440px;
-}
 
 /* Author Section */
-#who-container {
+#who-container { /* -- sets display to flex with a 35px gap */
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
 /* Featured Books Section */
-#books-container {
+#books-container { /* -- sets the display to flex with a 35px gap */
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -128,16 +164,18 @@ header {
     background-color: var(--medium-pink);
     padding: 15px;
     text-align: center;
+    transition: transform 0.2s;
 }
-.book-item:hover {
+.book-item:hover { /* -- hover effect */
     box-shadow: 1px 1px 10px var(--light-brown);
+    transform: translateY(-10px);
 }
 .book-title {
     font-weight: 400;
     text-transform: uppercase;
     color: var(--light-brown);
 }
-.book-cover {
+.book-cover { /* -- sets the image to be in the center of the container */
     display: block;
     width: 40%;
     margin: 0 auto 20px;
@@ -152,7 +190,7 @@ header {
 }
 
 /* Testimonials Section */
-#testimonials {
+#testimonials { /* -- sets the position to relative that the text will appear in front of the image */
     position: relative;
     z-index: 1;
 }
@@ -170,8 +208,8 @@ header {
     margin: 0 auto;
     background-color: var(--yellow);
 }
-
-/* Quotation Marks in Testimonials Section */
+/* -- quotation mark images in section */
+/* -- set to absolute position behind the testimonials text, will appear like floating */
 #quotation-mark-1 {
     position: absolute;
     top: 130px;
@@ -187,29 +225,8 @@ header {
     z-index: -1;
 }
 
-/* Miscellaneous Styles */
-hr {
-    border: none;
-    height: 10px;
-    background-color: var(--dark-pink);
-}
-img {
-    width: 100%;
-    padding: 30px 0;
-}
-.brown-bg {
-    background-color: var(--brown);
-    color: var(--yellow);
-    padding: 35px 30px;
-}
-.pink-bg {
-    background-color: var(--light-pink);
-    color: var(--dark-pink);
-    padding: 35px 30px;
-}
-
-/* Stay Updated Section */
-form {
+/* Newsletter Section */
+form { /* -- sets the display to grid with 2 columns, 70% and 30% of the parent container */
     display: grid;
     grid-template-columns: 70% 30%;
     margin-top: 10px;
@@ -237,8 +254,9 @@ footer {
     padding: 15px 30px;
 }
 
+/* VIEWPORT (500px--659px | LARGE MOBILE / SMALL TABLET*/
 @media screen and (min-width:500px) and (max-width:659px) {
-    /* Typography */
+    /* Typography*/
     p {
         font-size: 16px;
     }
@@ -248,25 +266,18 @@ footer {
     h2 {
         font-size: 22px;
     }
+    input::placeholder {
+        font-size: 16px;
+    }
 
+    /* Header Section */
     header {
         font-size: 45px;
         padding: 25px 50px;
     }
 
-    button {
-        font-size: 16px;
-    }
-
-    .brown-bg {
-        padding: 35px 50px;
-    }
-    .pink-bg {
-        padding: 35px 50px;
-    }
-
     /* Landing Page Section */
-    #landing-page {
+    #landing-page { /* -- sets the landing page division */
         grid-template-columns: 90vw 10vw;
     }
     #landing-page-text {
@@ -276,21 +287,20 @@ footer {
         font-size: 50px;
     }
 
-    .book-cover {
+    /* Featured Books Section */ 
+    .book-cover { /* -- lessens the size of the book covers */
         width: 30%;
     }
 
-    input::placeholder {
-        font-size: 16px;
-    }
-
+    /* Footer Section */ 
     footer {
         padding: 15px 50px;
     }
 }
 
-@media  (min-width:660px) and (max-width:1023px) {
-    /* Typography */
+/* VIEWPORT (660px--1023px) | TABLET */
+@media (min-width:660px) and (max-width:1023px) {
+    /* Typography & Button */
     p {
         font-size: 18px;
     }
@@ -300,26 +310,31 @@ footer {
     h2 {
         font-size: 25px;
     }
-
+    input::placeholder {
+        font-size: 18px;
+    }
     button {
         font-size: 18px;
     }
 
-    header {
-        font-size: 45px;
-        padding: 25px 50px;
-        text-align: center;
-    }
-
-    .brown-bg {
+    /* Miscellaneous Styles */
+    /* -- increases padding for all sections */
+    .brown-bg { 
         padding: 45px 55px;
     }
     .pink-bg {
         padding: 45px 55px;
     }
 
+    /* Header Section */
+    header {
+        font-size: 45px;
+        padding: 25px 50px;
+        text-align: center;
+    }
+
     /* Landing Page Section */
-    #landing-page {
+    #landing-page { /* -- sets the landing page division */
         grid-template-columns: 90% 10%;
     }
     #landing-page-text {
@@ -329,32 +344,27 @@ footer {
         font-size: 55px;
     }
 
-    /* Featured Books Section */ 
-
-
-    #books-container { 
-        max-width: 100%; 
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
-        gap: 25px; 
-    } 
-    .book-cover { 
-        width: 40%; 
+    /* Featured Books Section */
+    #books-container { /* -- changes the featured works to be displayed in 2 equal columns */
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    .book-cover { /* -- sets the book cover sizes */
+        width: 40%;
     }
 
-    input::placeholder {
-        font-size: 18px;
-    }
-
+    /* Footer Section */
     footer {
         padding: 15px 40px;
         text-align: center;
     }
-
 }
 
-@media  (min-width:1024px) {
-    /* Typography */
+/* VIEWPORT (1024px ABOVE) | DESKTOP */
+@media (min-width:1024px) {
+    /* Typography & Button */
     p {
         font-size: 22px;
         text-align: center;
@@ -366,24 +376,21 @@ footer {
     h2 {
         font-size: 40px;
     }
-
-    button {
+    input::placeholder {
         font-size: 22px;
-        max-width: 250px;
+    }
+    button { /* -- sets the button to have a max width and to be displayed in the middle of the page rather than on the left side */
+        font-size: 22px;
+        max-width: 300px;
         margin: 35px auto 0;
         display: block;
     }
 
-    header {
-        font-size: 65px;
-        padding: 30px 50px;
-        text-align: center;
-    }
-
-    br {
+    /* Miscellaneous Styles */
+    br { 
         display: none;
     }
-
+    /* -- increases padding for all sections */
     .brown-bg {
         padding: 45px 120px;
     }
@@ -391,55 +398,74 @@ footer {
         padding: 45px 120px;
     }
 
+    /* Header Section */
+    header {
+        font-size: 65px;
+        padding: 30px 50px;
+        text-align: center;
+    }
+
     /* Landing Page Section */
-    #landing-page {
+    #landing-page-text-container { /* -- changes the landing page's image to fit the desktop viewport better */
+        background: url('images/background-large.png') no-repeat center center;
+        background-size: cover;
+    }
+    #landing-page { /* -- sets the division for the landing page */
         grid-template-columns: 90% 10%;
     }
     #landing-page-text {
         padding: 45vh 0 55px 120px;
         max-width: 550px;
     }
-    #landing-page-text h1 {
+    /* -- aligns text to the left */
+    #landing-page-text h1 { 
         font-size: 55px;
         text-align: left;
     }
     #landing-page-text p {
         text-align: left;
     }
+    /* -- sets a max width for the landing page button */
     #landing-page-text button {
-        max-width: 250px;
+        margin: 30px 0 0;
+        max-width: 300px;
     }
 
     /* Author Section */
     #who-container {
-        display: flex;
-        flex-direction: column;
         gap: 55px;
     }
-
+    /* -- aligns text to the left */
+    #who-container .left p {
+        text-align: left;
+    }
+    #who-container .right p {
+        text-align: right;
+    }
+    /* -- sets a max width to the container, ensuring the author image does not overtake the website space */
     #who-image-container, #testimonials-container {
         max-width: 750px;
         margin: 0 auto;
     }
 
     /* Featured Books Section */
-    #books-container {
+    #books-container { /* -- sets the featured books container to display items in a grid with 2 equal columns */
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .book-item {
-        display: grid;
+        display: grid; /* -- changes the layout of each book item, having the cover be on the left and the information on the right */
         grid-template-columns: 1fr 2fr;
         gap: 25px;
     }
-    .book-info {
+    .book-info { /* -- ensures the text has equal space on both sides */
         margin: auto 0;
     }
-    .book-cover {
+    .book-cover { /* -- lets the image take 100% of the parent container */
         width: 100%;
         margin: auto 0;
     }
-    .book-title {
+    .book-title { /* -- aligns the book title to the left */
         font-size: 25px;
         text-align: left;
     }
@@ -447,16 +473,13 @@ footer {
         font-size: 18px;
     }
 
-    #stay-updated button {
+    /* Newsletter Section */
+    #stay-updated button { /* -- removes the max width for the button in the newsletter section to fit with the input field */
         max-width: none;
     }
 
-    input::placeholder {
-        font-size: 22px;
-    }
-
+    /* Footer Section */
     footer {
         padding: 20px 40px;
     }
-
 }

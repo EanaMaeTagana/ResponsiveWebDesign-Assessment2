@@ -1,17 +1,24 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+// node.js server
 
-// Serve static files (HTML, CSS, JS)
+// variables
+
+const express = require('express'); // import express module to create the server
+const app = express(); // holds the server
+const port = 3000; // set the port which will host the website, in this case 3000
+
+// tells express to serve the static files from the folder "public"
 app.use(express.static('public'));
 
-// API route to serve JSON data
+// sets up the API when visiting /api/books, essentially serving the database to the user
 app.get('/api/books', (req, res) => {
-    const works = require('./public/book-database.json'); // Load the database
-    res.json(works); // Send the JSON data
+    // loads the database from the JSON file
+    const works = require('./public/book-database.json'); 
+    // shows the book information to the user
+    res.json(works); 
 });
 
-// Start the server
+// starts the server and listens for request
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    // logs the message when the server is running
+    console.log(`Server running on: http://localhost:${port}`);
 });

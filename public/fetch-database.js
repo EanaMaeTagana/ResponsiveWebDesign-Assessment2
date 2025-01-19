@@ -1,16 +1,22 @@
-// Fetch book data from the server and update the DOM
+// fetch the book data from the server and update the DOM
 fetch('/api/books')
-  .then(response => response.json())
+  // parse as a JSON response
+  .then(response => response.json()) 
   .then(data => {
-    const booksContainer = document.getElementById('books-container'); // Container for books
-    booksContainer.innerHTML = ''; // Clear any existing content
+    // container for books
+    const booksContainer = document.getElementById('books-container'); 
+    // clear any existing content within the HTML
+    booksContainer.innerHTML = ''; 
 
+    // loop through each book within the data
     data.forEach(book => {
-      // Create a container for each book
+      // creates a new <div> element for the book
       const bookElement = document.createElement('div');
-      bookElement.classList.add('book-item'); // Add class for styling
+      // add a class as "book-item"
+      bookElement.classList.add('book-item'); 
 
-      // Add book details
+      // add the book details (cover, title, and summary) to each container
+      // each one is classed individually as per the content it holds
       bookElement.innerHTML = `
         <img src="${book.cover}" alt="${book.title} Cover" class="book-cover">
         <div class="book-info">
@@ -19,8 +25,9 @@ fetch('/api/books')
         </div>
       `;
 
-      // Append the book element to the container
+      // append the content to appear within the main container
       booksContainer.appendChild(bookElement);
     });
   })
+  // error handling
   .catch(error => console.error('Error fetching data:', error));

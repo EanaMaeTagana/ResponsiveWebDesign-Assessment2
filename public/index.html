@@ -1,8 +1,12 @@
+<!---------- EMILY HENRY - AUTHOR WEBSITE ---------->
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links & Stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>Emily Henry</title>
@@ -10,10 +14,13 @@
 
 <body>
 
+    <!----------     Header Section     ---------->
     <header>emily henry</header>
 
+    <!----------     Landing Page Section     ---------->
     <section id="landing-page">
 
+        <!-- ID "landing-page-text-container": will hold the text for easier styling -->
         <div id="landing-page-text-container">
             <section id="landing-page-text">
             <h1>“you are<br>
@@ -25,26 +32,39 @@
             <button>READ HAPPY PLACE</button>
             </section>
         </div>
+
+        <!-- ID "landing-page-side": separated from the text for easier styling -->
         <div id="landing-page-side"></div>
     </section>
 
-    <div id="pre-order">
-    </div>
-
+    <!----------     Main Content Section     ---------->
     <main class="container">
 
+        <!----------     About Section     ---------->
+        
+        <!-- Class "brown-bg": for easier styling -->
         <section class="brown-bg" id="who-is-emily-henry">
             <h1>WHO IS EMILY HENRY?</h1>
+
+            <!-- Information & Images -->
             <div id="who-image-container">
-                <img src="images/emily-henry-picture.jpg">
+                <img src="images/emily-henry-picture.jpg" alt="Photo of Emily Henry">
+
+                <!-- Information Container: for easier styling -->
                 <div id="who-container">
-                    <article class="left">
+
+                    <!-- Classes "left" "right": for easier grid and display styling -->
+                    
+                    <!-- Article 1 -->
+                    <article class="left" >
                         <h2>meet the<br>queen of romance</h2>
                         <p>Emily Henry is a #1 New York Times bestselling author celebrated for her 
                             heartfelt and witty novels like Beach Read and Happy Place. 
                             Her stories captivate with charm, humor, and unforgettable characters. 
                             Each book is a perfect escape.</p>
                     </article>
+
+                    <!-- Article 2 -->
                     <article class="right">
                         <h2>her stories,<br>your adventures</h2>
                         <p>From Book Lovers to People We Meet on Vacation, 
@@ -52,6 +72,8 @@
                             With multiple #1 bestsellers, her stories are relatable, heartwarming, 
                             and impossible to put down.</p>
                     </article>
+
+                    <!-- Article 3 -->
                     <article class="left">
                         <h2>discover her world</h2>
                         <p>Emily’s books bring magic to everyday moments, 
@@ -62,50 +84,78 @@
             </div>
         </section>
 
+        <!-- Horizontal Rule -->
         <hr>
+        
+        <!----------     Featured Works Section     ---------->
+        <!-- Class "pink-bg": for easier styling -->
+        <!-- ID "featured-works": for easier styling of grid and display -->
         
         <section class="pink-bg" id="featured-works">
             <h1>FEATURED WORKS</h1>
             <section id="books-container">
-
+                <!-- Placeholder: area which will dynamically be populated through the script -->
             </section>
             <button>VIEW MORE</button>
         </section>
 
+        <!-- External JavaScript: to fetch and display the books -->
         <script src="fetch-database.js"></script>
 
+        <!-- Horizontal Rule -->
         <hr>
 
+        <!----------     Testimonials Section     ---------->
+        <!-- Class "brown-bg": for easier styling -->
+        
         <section class="brown-bg" id="testimonials">
             <h1>WHAT THE WORLD IS SAYING</h1>
 
-            <img src="images/quotation-mark-1.png" id="quotation-mark-1">
+            <!-- Decoration Image -->
+            <img src="images/quotation-mark-1.png" id="quotation-mark-1" alt="Quotation mark">
 
+            <!-- Information Container: for easier styling -->
             <div id="testimonials-container">
+
+                <!-- Classes "left" "right": for easier grid and display styling -->
+                
+                <!-- Article 1 -->
                 <article class="left">
                     <p>A sparkling, heartfelt delight. Emily Henry writes with humor and honesty that keeps 
                         readers hooked from start to finish.
                         <br>— New York Times</p>
                 </article>
-                <hr>
+
+                <hr> <!-- Horizontal Rule -->
+
+                <!-- Article 2 -->
                 <article class="right">
                     <p>Henry’s novels are a masterclass in modern romance—smart, 
                         funny, and deeply moving.
                         <br>— Publishers Weekly.</p>
                 </article>
-                <hr>
+
+                <hr> <!-- Horizontal Rule -->
+
+                <!-- Article 3 -->
                 <article class="left">
                     <p>Emily Henry captures the magic of love and connection 
                         with unforgettable characters and witty storytelling.
                         <br>— Entertainment Weekly</p>
                 </article>
-                <hr>
+
+                <hr> <!-- Horizontal Rule -->
+
+                <!-- Article 4 -->
                 <article class="right">
                     <p>Charming, unputdownable, and brimming with heart. 
                         This is romance at its finest.
                         <br>— Booklist</p>
                 </article>
-                <hr>
+
+                <hr> <!-- Horizontal Rule -->
+
+                <!-- Article 5 -->
                 <article class="left">
                     <p>Henry’s books remind us why we fall in love—with stories, 
                         with people, and with life.
@@ -113,30 +163,41 @@
                 </article>
             </div>
 
-            <img src="images/quotation-mark-2.png" id="quotation-mark-2">
-
+            <!-- Decoration Image -->
+            <img src="images/quotation-mark-2.png" id="quotation-mark-2" alt="Quotation mark">
         </section>
 
+        <!-- Horizontal Rule -->
         <hr>
 
+        <!----------     CTA Section     ---------->
+        <!-- Class "pink-bg": for easier styling -->
+        
         <section class="pink-bg" id="call-to-action">
             <h1>FIND YOUR NEXT FAVORITE READ</h1>
             <p>Explore Emily Henry’s books and dive into a world of unforgettable stories.</p>
             <button>BROWSE NOW</button>
         </section>
 
+        <!----------     Newsletter Section     ---------->
+        <!-- Class "brown-bg": for easier styling -->
+        
         <section class="brown-bg" id="stay-updated">
             <h1>STAY UPDATED</h1>
-            <p>Keep up with the latest releases, exclusive bonus content, and more by subscribing to the newsletter!
-            </p>
-            <form action="">
+            <p>Keep up with the latest releases, exclusive bonus content, and more by subscribing to the newsletter!</p>
+
+            <!-- Form: to take the users e-mail -->
+            <form>
+                <!-- Input Area -->
                 <input type="email" id="email" name="email" placeholder="Enter a valid e-mail address" required>
+                <!-- Submit Button -->
                 <button type="submit">SUBMIT</button>
             </form>
         </section>
 
     </main>
 
+    <!----------     Footer Section     ---------->
     <footer>
         <p>©EmilyHenry</p>
     </footer>
